@@ -7,15 +7,25 @@
 
 .vui-list > li {
 	padding: 7px 10px;
-	border-bottom: 1px solid #EAEAEA;
+	border-bottom: 1px solid @itemSeparatorColor;
 }
 
-.vui-list > li > input:first-child {
-	float: left;
+.vui-list > .vui-checkbox,
+.vui-list > .vui-radio {
+	margin: 0;
+	padding-left: 30px;
 }
 
-.vui-list > li > input:first-child + div {
-	padding-left: 28px;
+.vui-list > .vui-selected {
+	background-color: @itemSelectedBackgroundColor;
+}
+
+.vui-list > .vui-active {
+	background-color: @itemHoverBackgroundColor;
+}
+
+.vui-list > .vui-selected.vui-active {
+	background-color: @itemSelectedHoverBackgroundColor;
 }
 
 .vui-list > li:last-child {
