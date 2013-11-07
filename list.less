@@ -12,6 +12,11 @@
 	list-style: none outside none;
 }
 
+.vui-list.vui-compact > li {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 .vui-list > .vui-checkbox,
 .vui-list > .vui-radio {
 	margin: 0;
@@ -32,6 +37,10 @@
 }
 
 .vui-list > li:last-child {
+	border-bottom: 1px solid transparent;
+}
+
+.vui-list.vui-no-separator > li {
 	border-bottom: 1px solid transparent;
 }
 
