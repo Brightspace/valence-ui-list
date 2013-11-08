@@ -10,9 +10,9 @@
 
 				$node.find( 'li.vui-checkbox > label > input, li.vui-radio > label > input' ).each(
 					function ( index, inputNode ) {
-					
+						
 						var $input = $( inputNode );
-					
+
 						$input.closest( 'li.vui-checkbox, li.vui-radio' ).toggleClass(
 							'vui-selected', $input.prop( 'checked' )
 						);
