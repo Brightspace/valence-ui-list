@@ -6,25 +6,39 @@
 
 			var $node = $( this.element );
 
-			$node.find( 'li.vui-checkbox > label > input' ).each(
-				function ( index, inputNode ) {
+			var updateListSelection = function() {
+
+				$node.find( 'li.vui-checkbox > label > input, li.vui-radio > label > input' ).each(
+					function ( index, inputNode ) {
 					
-					var $input = $( inputNode );
+						var $input = $( inputNode );
 					
-					$input.closest( 'li.vui-checkbox' ).toggleClass(
-						'vui-selected', $input.prop( 'checked' )
-					);
+						$input.closest( 'li.vui-checkbox, li.vui-radio' ).toggleClass(
+							'vui-selected', $input.prop( 'checked' )
+						);
 					
-				}
-			);
+					}
+				);
+
+			};
+
+			updateListSelection();
 
 			$node.change( function( args ) {
 
 				var $target = $( args.target );
+				
+				if ( $target.attr( 'type' ) === 'checkbox' ) {
+					
+					$target.closest( 'li.vui-checkbox' ).toggleClass(
+						'vui-selected', $target.prop( 'checked' ) 
+					);
 
-				$target.closest( 'li.vui-checkbox' ).toggleClass(
-					'vui-selected', $target.prop( 'checked' ) 
-				);
+				} else if ( $target.attr( 'type' ) === 'radio' ) {
+
+					updateListSelection();
+
+				}
 
 			} );
 
