@@ -1,4 +1,6 @@
-﻿( function( $ ) {
+/*jslint browser: true*/
+
+( function( $, vui ) {
 
 	$.widget( 'vui.vui_list', {
 
@@ -53,4 +55,4 @@
 			}
 		);
 
-} )( window.jQuery );
+} )( window.jQuery, window.vui );
