@@ -2,6 +2,16 @@
 
 ( function( $, vui ) {
 
+	// Check if the provided vui global is defined, otherwise try to require it if
+	// we're in a CommonJS environment; otherwise we'll just fail out
+	if( vui === undefined ) {
+		if( typeof require === 'function' ) {
+			vui = require('../../vui');
+		} else {
+			throw new Error('load vui first');
+		}
+	}
+
 	$.widget( 'vui.vui_list', {
 
 		_create: function() {
@@ -12,13 +22,13 @@
 
 				$node.find( 'li.vui-checkbox > label > input, li.vui-radio > label > input' ).each(
 					function ( index, inputNode ) {
-						
+
 						var $input = $( inputNode );
 
 						$input.closest( 'li.vui-checkbox, li.vui-radio' ).toggleClass(
 							'vui-selected', $input.prop( 'checked' )
 						);
-					
+
 					}
 				);
 
@@ -29,11 +39,11 @@
 			$node.change( function( args ) {
 
 				var $target = $( args.target );
-				
+
 				if ( $target.attr( 'type' ) === 'checkbox' ) {
-					
+
 					$target.closest( 'li.vui-checkbox' ).toggleClass(
-						'vui-selected', $target.prop( 'checked' ) 
+						'vui-selected', $target.prop( 'checked' )
 					);
 
 				} else if ( $target.attr( 'type' ) === 'radio' ) {
