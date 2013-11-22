@@ -1,6 +1,8 @@
 /*jslint browser: true*/
 
-( function( $, vui ) {
+( function( vui, $ ) {
+
+	$ = vui.$;
 
 	$.widget( 'vui.vui_list', {
 
@@ -12,13 +14,13 @@
 
 				$node.find( 'li.vui-checkbox > label > input, li.vui-radio > label > input' ).each(
 					function ( index, inputNode ) {
-						
+
 						var $input = $( inputNode );
 
 						$input.closest( 'li.vui-checkbox, li.vui-radio' ).toggleClass(
 							'vui-selected', $input.prop( 'checked' )
 						);
-					
+
 					}
 				);
 
@@ -29,11 +31,11 @@
 			$node.change( function( args ) {
 
 				var $target = $( args.target );
-				
+
 				if ( $target.attr( 'type' ) === 'checkbox' ) {
-					
+
 					$target.closest( 'li.vui-checkbox' ).toggleClass(
-						'vui-selected', $target.prop( 'checked' ) 
+						'vui-selected', $target.prop( 'checked' )
 					);
 
 				} else if ( $target.attr( 'type' ) === 'radio' ) {
@@ -55,4 +57,4 @@
 			}
 		);
 
-} )( window.jQuery, window.vui );
+} )( window.vui );
