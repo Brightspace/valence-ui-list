@@ -62,8 +62,13 @@
 
 			} );
 
+		},
+		
+		_destroy: function () {
+			$( this.element ).find( 'li.vui-selected' )
+				.removeClass( 'vui-selected' );
 		}
-
+		
 	} );
 
 	vui.addClassInitializer(
