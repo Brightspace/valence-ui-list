@@ -65,7 +65,7 @@
 		},
 		
 		_destroy: function () {
-			$( this.element ).find( 'li.vui-selected' )
+			$( this.element ).children( 'li.vui-selected' )
 				.removeClass( 'vui-selected' );
 		}
 		
