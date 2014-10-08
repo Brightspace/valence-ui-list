@@ -1,0 +1,55 @@
+@itemSelectedBackgroundColor: #e8f2fc;
+@itemHoverBackgroundColor: #e7e7e7;
+@itemSelectedHoverBackgroundColor: #d3e7fa;
+@itemSeparatorColor: #eaeaea;
+@itemSelectedSeparatorColor: #f5f5f5;
+
+.vui-list() {
+	padding: 0;
+	list-style: none outside none;
+
+	& > li {
+		padding: 7px 10px;
+		border-width: 0;
+		border-bottom: 1px solid @itemSeparatorColor;
+		list-style: none outside none;	
+	}
+
+	&.vui-compact > li{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	& > .vui-checkbox,
+	& > .vui-radio {
+		margin: 0;
+		padding-left: 30px;
+	}
+
+	& > .vui-selected {
+		background-color: @itemSelectedBackgroundColor;
+		border-bottom-color: @itemSelectedSeparatorColor;
+	}
+
+	& > .vui-active {
+		background-color: @itemHoverBackgroundColor;
+	}
+
+	& > .vui-selected.vui-active {
+		background-color: @itemSelectedHoverBackgroundColor;
+	}
+
+	& > li:last-child {
+		border-bottom: 1px solid transparent;
+	}
+
+	&.vui-no-separator > li {
+		border-bottom: 1px solid transparent;
+	}
+
+	[dir='rtl'] & > .vui-checkbox,
+	[dir='rtl'] & > .vui-radio {
+		padding-left: 10px;
+		padding-right: 30px;
+	}
+}
