@@ -9,7 +9,8 @@ gulp.task( 'clean', function() {
 gulp.task( 'css', function () {
 	return vui.makeCss( 
 		'list.css.less',
-		'list.css'
+		'list.css',
+		{ 'lintOpts' : '.csslintrc' }		
 	);
 } );
 
