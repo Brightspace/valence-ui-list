@@ -1,0 +1,19 @@
+@itemSelectedBackgroundColor: #e8f2fc;
+@itemHoverBackgroundColor: #e7e7e7;
+@itemSelectedHoverBackgroundColor: #d3e7fa;
+@itemSelectedSeparatorColor: #f5f5f5;
+
+#vui {
+	.list-item-selected() {
+		background-color: @itemSelectedBackgroundColor;
+		border-bottom-color: @itemSelectedSeparatorColor;
+	}
+
+	.list-item-active() {
+		background-color: @itemHoverBackgroundColor;
+	}
+
+	.list-item-selected-active() {
+		background-color: @itemSelectedHoverBackgroundColor;
+	}
+}
