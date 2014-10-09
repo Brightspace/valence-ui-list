@@ -1,7 +1,7 @@
 @itemSeparatorColor: #eaeaea;
 
-#valence-ui {
-	.vui-list() {
+#vui {
+	.list() {
 		padding: 0;
 		list-style: none outside none;
 
@@ -18,16 +18,16 @@
 
 	}
 
-	.vui-list-compact() {
-		#valence-ui.vui-list();
+	.list-compact() {
+		#vui.list();
 		& > li {
 			padding-top: 0;
 			padding-bottom: 0;
 		}
 	}
 
-	.vui-list-no-separator() {
-		#valence-ui.vui-list();
+	.list-no-separator() {
+		#vui.list();
 		& > li {
 			border-bottom: 1px solid transparent;
 		}
