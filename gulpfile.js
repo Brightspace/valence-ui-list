@@ -2,8 +2,10 @@ var gulp = require( 'gulp' ),
 	del = require( 'del' ),
 	vui = require( 'vui-helpers' );
 
+console = process.stderr;
+
 gulp.task( 'clean', function( cb ) {
-	del([ 'list.css' ], cb);
+	del([ 'list.css' ], ['test/output'], cb);
 } );
 
 gulp.task( 'css', function () {
@@ -23,6 +25,19 @@ gulp.task( 'test', function () {
 		files: [
 			'test/**/*Spec.js',
 			'list.css'
-		]
+		],
+		directivesPreprocess: {
+			flags: {
+				'js' : { ER_GEN: true }
+			}
+		}		
 	} ) ;
 } );
+
+gulp.task( 'ergen', function() {
+	return vui.test(
+			'test/karma.conf.js',
+			'test/listSpec.js',
+			'*.css'
+		);
+});
