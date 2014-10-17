@@ -1,7 +1,7 @@
 {
   "name": "vui-list",
-  "description": "Valence.UI list control",
-  "version": "0.0.1",
+  "description": "LESS mixins and CSS for applying list styles",
+  "version": "0.0.2",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "repository": {
@@ -20,6 +20,7 @@
   "keywords": [
     "d2l",
     "valence-ui",
-    "vui"
+    "vui",
+    "list"
   ]
 }
