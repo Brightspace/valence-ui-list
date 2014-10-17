@@ -1,21 +1,24 @@
-var gulp = require( 'gulp' ),
-	del = require( 'del' ),
-	vui = require( 'vui-helpers' );
+var del = require('del'),
+	gulp = require('gulp'),
+	jshint = require('gulp-jshint'),
+	vui = require('vui-helpers');
 
 gulp.task( 'clean', function( cb ) {
 	del([ 'list.css' ], ['test/output'], cb);
 } );
 
 gulp.task( 'css', function () {
-	return vui.makeCss( 
+	return vui.makeCss(
 		'list.css.less',
 		'list.css',
 		{ 'lintOpts' : '.csslintrc' }
 	);
 } );
 
-gulp.task( 'default', [ 'clean' ], function() {
-	gulp.start( 'css' );
+gulp.task( 'js', function() {
+	return gulp.src( ['gulpfile.js', 'test/*.js'] )
+		.pipe( jshint() )
+		.pipe( jshint.reporter('default') );
 } );
 
 gulp.task( 'test', function () {
@@ -35,3 +38,7 @@ gulp.task( 'ergen', function() {
 		]
 	}, true );
 });
+
+gulp.task( 'default', [ 'clean' ], function() {
+	gulp.start( 'css', 'js' );
+} );
