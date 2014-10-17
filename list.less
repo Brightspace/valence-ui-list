@@ -1,36 +1,32 @@
 @vui-listSeparatorColor: #eaeaea;
 
 #vui {
-	.list() {
+	.list( @hasSeparator: false, @isCompact: false ) {
+		
 		padding: 0;
 		list-style: none outside none;
 
 		& > li {
-			padding: 7px 10px;
+			& when (@isCompact = true ) {
+				padding: 0 10px;
+			}
+			& when (@isCompact = false ) {
+				padding: 7px 10px;
+			}
 			border-width: 0;
-			border-bottom: 1px solid @vui-listSeparatorColor;
-			list-style: none outside none;	
+			& when (@hasSeparator = true ) {
+				border-bottom: 1px solid @vui-listSeparatorColor;
+			}
+			& when (@hasSeparator = false ) {
+				border-bottom: 1px solid transparent;
+			}
+			list-style: none outside none;
 		}
 
 		& > li:last-child {
 			border-bottom: 1px solid transparent;
 		}
 
-	}
-
-	.list-compact() {
-		#vui.list();
-		& > li {
-			padding-top: 0;
-			padding-bottom: 0;
-		}
-	}
-
-	.list-no-separator() {
-		#vui.list();
-		& > li {
-			border-bottom: 1px solid transparent;
-		}
 	}
 
 }
