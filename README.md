@@ -54,8 +54,8 @@ List items can be in two different states (or a combination of both states),
 and we expose different mixins for each state:
 - **selected**: this state is reserved for lists that support selection of
 items, either with checkboxes or radio buttons
-- **active**: clickable or selectable items are typically put into this state when the user's mouse
-hovers over them, or when they receive keyboard focus
+- **active**: clickable or selectable items are typically put into this state
+when the user's mouse hovers over them, or when they receive keyboard focus
 
 Use the `list-item-selected` and `list-item-active` mixins to apply states to
 items. For items which are both selected and active, use the
@@ -101,13 +101,15 @@ And reduce padding inside the items by making your list compact:
 <ul class="vui-list vui-list-compact"></ul>
 ```
 
-Item `selected` and `active` states can be applied using the `vui-item-selected`,
-`vui-item-active` and `vui-item-selected-active` classes.
+Item `selected` and `active` states can be applied using the
+`vui-list-item-selected`, `vui-list-item-active` and
+`vui-list-item-selected-active` classes.
 
 ##Building
 
-After grabbing the source, [Gulp](http://gulpjs.com/) should be installed globally
-using the `npm install -g gulp` command. Then install package dependencies:
+After grabbing the source, [Gulp](http://gulpjs.com/) should be installed
+globally using the `npm install -g gulp` command. Then install package
+dependencies:
 
 ```shell
 npm install
@@ -129,7 +131,10 @@ npm test
 
 ### Code Style
 
-This repository is configured with [EditorConfig](http://editorconfig.org) rules and contributions should make use of them. See the valence-ui [Code Style wiki page](https://github.com/Desire2Learn-Valence/valence-ui-helpers/wiki/Code-Style) for details.
+This repository is configured with [EditorConfig](http://editorconfig.org) rules
+and contributions should make use of them. See the valence-ui [Code Style wiki
+page](https://github.com/Desire2Learn-Valence/valence-ui-helpers/wiki/Code-Style)
+for details.
 
 [npm-url]: https://npmjs.org/package/vui-list
 [npm-image]: https://badge.fury.io/js/vui-list.png
