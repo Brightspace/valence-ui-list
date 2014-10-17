@@ -1,12 +1,6 @@
 ( function() {
 	'use strict';
 
-	var createVUIElement = function( tag, className ) {
-		var vuif = document.createElement( tag );
-		vuif.className = className;
-		return vuif;
-	};
-
 	var container;
 
 	beforeEach( function() {
@@ -34,7 +28,8 @@
 		})
 
 		it( 'has expected class styles', function() {
-			expect( ul ).toHaveClassStyles( {} );
+			var diff = d2l.jasmine.differs.diffDefaultStyle( ul );
+			expect( diff ).toMatchER( "list.ul_vui_list" );
 		});
 
 	} );
