@@ -30,21 +30,21 @@ ul {
 }
 ```
 
-Lists can be rendered without separators between the items by passing the
-`hasSeparators` parameter as `false`:
+Lists can be rendered without separators by also calling the sub-mixin '#vui.list.no-separator':
 
 ```css
 ul {
-  #vui.list( @hasSeparators: false );
+  #vui.list();
+  #vui.list.no-separator();
 }
 ```
 
-To render lists with less padding inside the items, pass the `isCompact`
-parameter as `true`:
+To render lists with less padding inside the items, also call the sub-mixin '#vui.list.compact':
 
 ```css
 ul {
-  #vui.list( @isCompact: true );
+  #vui.list();
+  #vui.list.compact();
 }
 ```
 
@@ -57,22 +57,21 @@ items, either with checkboxes or radio buttons
 - **active**: clickable or selectable items are typically put into this state
 when the user's mouse hovers over them, or when they receive keyboard focus
 
-Use the `list-item-selected` and `list-item-active` mixins to apply states to
-items. For items which are both selected and active, use the
-`list-item-selected-active` mixin.
+Use the `#vui.list-item.selected` and `#vui.list-item.active` sub-mixins to apply states to
+items. For items which are both selected and active, use `#vui.list-item.selected.active`.
 
 Sample LESS:
 ```css
 @import 'node_modules/vui-list/list-item'
 
 li:hover, li:focus {
-    #vui.list-item-active();
+    #vui.list-item.active();
 }
 
 li.selected {
     #vui.list-item-selected();
     &:hover, &:focus {
-        #vui.list-item-selected-active();
+        #vui.list-item.selected.active();
     }
 }
 ```
@@ -93,17 +92,17 @@ Similar to the LESS mixin, you can disable the separators between list items
 by adding the `vui-list-no-separator` class:
 
 ```css
-<ul class="vui-list vui-list-no-separator"></ul>
+<ul class="vui-list vui-no-separator"></ul>
 ```
 
 And reduce padding inside the items by making your list compact:
 ```css
-<ul class="vui-list vui-list-compact"></ul>
+<ul class="vui-list vui-compact"></ul>
 ```
 
 Item `selected` and `active` states can be applied using the
-`vui-list-item-selected`, `vui-list-item-active` and
-`vui-list-item-selected-active` classes.
+`vui-selected`, `vui-list-item-active` and
+`vui-active` classes.
 
 ##Building
 
