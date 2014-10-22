@@ -89,7 +89,7 @@
 					expect( diff ).toMatchER( "list_item." + ulClass + ".li_vui_selected_vui_active_last" );
 				});
 			});
-		}
+		};
 
 		describe( 'list items', testListItems( "ul_vui_list" ) );
 
