@@ -5,23 +5,22 @@
 	#vui.list();
 }
 
-.vui-list-compact > li {
-	padding-top: 0;
-	padding-bottom: 0;
+.vui-list.vui-compact {
+	#vui.list.compact();
 }
 
-.vui-list-no-separator > li {
-	border-bottom: 1px solid transparent;
+.vui-list.vui-no-separator {
+	#vui.list.no-separator();
 }
 
-.vui-list > .vui-list-item-selected {
-	#vui.list-item-selected();
+.vui-list > .vui-selected {
+	#vui.list-item.selected();
 }
 
-.vui-list > .vui-list-item-active {
-	#vui.list-item-active();
+.vui-list > .vui-active {
+	#vui.list-item.active();
 }
 
-.vui-list > .vui-list-item-selected-active {
-	#vui.list-item-selected-active();
+.vui-list > .vui-active.vui-selected {
+	#vui.list-item.selected.active();
 }
