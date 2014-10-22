@@ -1,6 +1,6 @@
 {
- "li_vui_list": {
-  "ul_first": {
+ "ul_vui_list": {
+  "li_first": {
    "border-bottom-color": "rgb(234, 234, 234)",
    "border-bottom-style": "solid",
    "border-bottom-width": "1px",
@@ -14,7 +14,7 @@
    "-webkit-perspective-origin": "490px 0px",
    "-webkit-transform-origin": "490px 0px"
   },
-  "ul_last": {
+  "li_last": {
    "border-bottom-color": "rgba(0, 0, 0, 0)",
    "border-bottom-style": "solid",
    "border-bottom-width": "1px",
@@ -28,7 +28,8 @@
    "-webkit-perspective-origin": "490px 0px",
    "-webkit-transform-origin": "490px 0px"
   },
-  "ul_selected_first": {
+  "li_vui_selected_first": {
+   "background-color": "rgb(232, 242, 252)",
    "border-bottom-color": "rgb(245, 245, 245)",
    "border-bottom-style": "solid",
    "border-bottom-width": "1px",
@@ -40,10 +41,10 @@
    "padding-top": "7px",
    "width": "980px",
    "-webkit-perspective-origin": "490px 0px",
-   "-webkit-transform-origin": "490px 0px",
-   "background-color": "rgb(232, 242, 252)"
+   "-webkit-transform-origin": "490px 0px"
   },
-  "ul_selected_last": {
+  "li_vui_selected_last": {
+   "background-color": "rgb(232, 242, 252)",
    "border-bottom-color": "rgba(0, 0, 0, 0)",
    "border-bottom-style": "solid",
    "border-bottom-width": "1px",
@@ -55,10 +56,10 @@
    "padding-top": "7px",
    "width": "980px",
    "-webkit-perspective-origin": "490px 0px",
-   "-webkit-transform-origin": "490px 0px",
-   "background-color": "rgb(232, 242, 252)"
+   "-webkit-transform-origin": "490px 0px"
   },
-  "ul_active_first": {
+  "li_vui_active_first": {
+   "background-color": "rgb(231, 231, 231)",
    "border-bottom-color": "rgb(234, 234, 234)",
    "border-bottom-style": "solid",
    "border-bottom-width": "1px",
@@ -70,10 +71,10 @@
    "padding-top": "7px",
    "width": "980px",
    "-webkit-perspective-origin": "490px 0px",
-   "-webkit-transform-origin": "490px 0px",
-   "background-color": "rgb(231, 231, 231)"
+   "-webkit-transform-origin": "490px 0px"
   },
-  "ul_active_last": {
+  "li_vui_active_last": {
+   "background-color": "rgb(231, 231, 231)",
    "border-bottom-color": "rgba(0, 0, 0, 0)",
    "border-bottom-style": "solid",
    "border-bottom-width": "1px",
@@ -85,10 +86,10 @@
    "padding-top": "7px",
    "width": "980px",
    "-webkit-perspective-origin": "490px 0px",
-   "-webkit-transform-origin": "490px 0px",
-   "background-color": "rgb(231, 231, 231)"
+   "-webkit-transform-origin": "490px 0px"
   },
-  "ul_selected_active_first": {
+  "li_vui_selected_vui_active_first": {
+   "background-color": "rgb(211, 231, 250)",
    "border-bottom-color": "rgb(245, 245, 245)",
    "border-bottom-style": "solid",
    "border-bottom-width": "1px",
@@ -100,10 +101,10 @@
    "padding-top": "7px",
    "width": "980px",
    "-webkit-perspective-origin": "490px 0px",
-   "-webkit-transform-origin": "490px 0px",
-   "background-color": "rgb(211, 231, 250)"
+   "-webkit-transform-origin": "490px 0px"
   },
-  "ul_selected_active_last": {
+  "li_vui_selected_vui_active_last": {
+   "background-color": "rgb(211, 231, 250)",
    "border-bottom-color": "rgba(0, 0, 0, 0)",
    "border-bottom-style": "solid",
    "border-bottom-width": "1px",
@@ -115,8 +116,7 @@
    "padding-top": "7px",
    "width": "980px",
    "-webkit-perspective-origin": "490px 0px",
-   "-webkit-transform-origin": "490px 0px",
-   "background-color": "rgb(211, 231, 250)"
+   "-webkit-transform-origin": "490px 0px"
   }
  }
 }
