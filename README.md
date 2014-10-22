@@ -30,7 +30,7 @@ ul {
 }
 ```
 
-Lists can be rendered without separators by also calling the sub-mixin '#vui.list.no-separator':
+Lists can be rendered without separators by also calling the sub-mixin `#vui.list.no-separator`:
 
 ```css
 ul {
@@ -39,7 +39,7 @@ ul {
 }
 ```
 
-To render lists with less padding inside the items, also call the sub-mixin '#vui.list.compact':
+To render lists with less padding inside the items, also call the sub-mixin `#vui.list.compact`:
 
 ```css
 ul {
