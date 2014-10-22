@@ -29,7 +29,7 @@
    "-webkit-transform-origin": "490px 0px"
   },
   "ul_selected_first": {
-   "border-bottom-color": "rgb(234, 234, 234)",
+   "border-bottom-color": "rgb(245, 245, 245)",
    "border-bottom-style": "solid",
    "border-bottom-width": "1px",
    "height": "0px",
@@ -40,7 +40,8 @@
    "padding-top": "7px",
    "width": "980px",
    "-webkit-perspective-origin": "490px 0px",
-   "-webkit-transform-origin": "490px 0px"
+   "-webkit-transform-origin": "490px 0px",
+   "background-color": "rgb(232, 242, 252)"
   },
   "ul_selected_last": {
    "border-bottom-color": "rgba(0, 0, 0, 0)",
@@ -54,7 +55,8 @@
    "padding-top": "7px",
    "width": "980px",
    "-webkit-perspective-origin": "490px 0px",
-   "-webkit-transform-origin": "490px 0px"
+   "-webkit-transform-origin": "490px 0px",
+   "background-color": "rgb(232, 242, 252)"
   },
   "ul_active_first": {
    "border-bottom-color": "rgb(234, 234, 234)",
@@ -68,7 +70,8 @@
    "padding-top": "7px",
    "width": "980px",
    "-webkit-perspective-origin": "490px 0px",
-   "-webkit-transform-origin": "490px 0px"
+   "-webkit-transform-origin": "490px 0px",
+   "background-color": "rgb(231, 231, 231)"
   },
   "ul_active_last": {
    "border-bottom-color": "rgba(0, 0, 0, 0)",
@@ -82,10 +85,11 @@
    "padding-top": "7px",
    "width": "980px",
    "-webkit-perspective-origin": "490px 0px",
-   "-webkit-transform-origin": "490px 0px"
+   "-webkit-transform-origin": "490px 0px",
+   "background-color": "rgb(231, 231, 231)"
   },
   "ul_selected_active_first": {
-   "border-bottom-color": "rgb(234, 234, 234)",
+   "border-bottom-color": "rgb(245, 245, 245)",
    "border-bottom-style": "solid",
    "border-bottom-width": "1px",
    "height": "0px",
@@ -96,7 +100,8 @@
    "padding-top": "7px",
    "width": "980px",
    "-webkit-perspective-origin": "490px 0px",
-   "-webkit-transform-origin": "490px 0px"
+   "-webkit-transform-origin": "490px 0px",
+   "background-color": "rgb(211, 231, 250)"
   },
   "ul_selected_active_last": {
    "border-bottom-color": "rgba(0, 0, 0, 0)",
@@ -110,7 +115,8 @@
    "padding-top": "7px",
    "width": "980px",
    "-webkit-perspective-origin": "490px 0px",
-   "-webkit-transform-origin": "490px 0px"
+   "-webkit-transform-origin": "490px 0px",
+   "background-color": "rgb(211, 231, 250)"
   }
  }
 }

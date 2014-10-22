@@ -53,37 +53,37 @@
 			});
 
 			it( 'selected first item has correct class styles', function() {
-				top_li.className = "vui-list-item-selected";
+				top_li.className = "vui-selected";
 				var diff = d2l.vui.differs.diffDefaultStyle( top_li );
 				expect( diff ).toMatchER( "list_item.li_vui_list.ul_selected_first" );
 			});
 
 			it( 'selected last item has correct  class styles', function() {
-				bottom_li.className = "vui-list-item-selected";
+				bottom_li.className = "vui-selected";
 				var diff = d2l.vui.differs.diffDefaultStyle( bottom_li );
 				expect( diff ).toMatchER( "list_item.li_vui_list.ul_selected_last" );
 			});
 
 			it( 'active first item has correct class styles', function() {
-				top_li.className = "vui-list-item-active";
+				top_li.className = "vui-active";
 				var diff = d2l.vui.differs.diffDefaultStyle( top_li );
 				expect( diff ).toMatchER( "list_item.li_vui_list.ul_active_first" );
 			});
 
 			it( 'active last item has correct  class styles', function() {
-				bottom_li.className = "vui-list-item-active";
+				bottom_li.className = "vui-active";
 				var diff = d2l.vui.differs.diffDefaultStyle( bottom_li );
 				expect( diff ).toMatchER( "list_item.li_vui_list.ul_active_last" );
 			});
 
 			it( 'selected active first item has correct class styles', function() {
-				top_li.className = "vui-list-item-selected-active";
+				top_li.className = "vui-selected vui-active";
 				var diff = d2l.vui.differs.diffDefaultStyle( top_li );
 				expect( diff ).toMatchER( "list_item.li_vui_list.ul_selected_active_first" );
 			});
 
 			it( 'selected active last item has correct  class styles', function() {
-				bottom_li.className = "vui-list-item-selected-active";
+				bottom_li.className = "vui-selected vui-active";
 				var diff = d2l.vui.differs.diffDefaultStyle( bottom_li );
 				expect( diff ).toMatchER( "list_item.li_vui_list.ul_selected_active_last" );
 			});
