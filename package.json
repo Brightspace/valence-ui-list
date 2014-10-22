@@ -16,7 +16,7 @@
     "gulp": "^3.8.8",
     "gulp-jshint": "^1.8.5",
     "vui-helpers": "^0.3.2",
-    "vui-karma-jasmine-tester": "0.0.2"
+    "vui-karma-jasmine-tester": "0.0.4"
   },
   "keywords": [
     "d2l",
