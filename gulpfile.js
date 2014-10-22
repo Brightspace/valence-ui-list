@@ -1,10 +1,11 @@
 var del = require('del'),
 	gulp = require('gulp'),
 	jshint = require('gulp-jshint'),
-	vui = require('vui-helpers');
+	vui = require('vui-helpers'),
+	tester = require('vui-karma-jasmine-tester');
 
 gulp.task( 'clean', function( cb ) {
-	del([ 'list.css' ], cb);
+	del([ 'list.css' ], ['test/output'], cb);
 } );
 
 gulp.task( 'css', function () {
@@ -21,14 +22,23 @@ gulp.task( 'js', function() {
 		.pipe( jshint.reporter('default') );
 } );
 
-gulp.task( 'test', function () {
-	return vui.test( {
+gulp.task( 'test', function( ) {
+	return tester.test( {
 		files: [
 			'test/**/*Spec.js',
 			'list.css'
 		]
-	} ) ;
-} );
+	});
+});
+
+gulp.task( 'ergen', function() {
+	return tester.test( {
+		files: [
+			'test/**/*Spec.js',
+			'list.css'
+		]
+	}, true );
+});
 
 gulp.task( 'default', [ 'clean' ], function() {
 	gulp.start( 'css', 'js' );

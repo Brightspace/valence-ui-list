@@ -4,16 +4,22 @@
 @vui-listItemSelectedSeparatorColor: #f5f5f5;
 
 #vui {
-	.list-item-selected() {
-		background-color: @vui-listItemSelectedBackgroundColor;
-		border-bottom-color: @vui-listItemSelectedSeparatorColor;
+
+	.list-item {
+
+		.selected() {
+			background-color: @vui-listItemSelectedBackgroundColor;
+			border-bottom-color: @vui-listItemSelectedSeparatorColor;
+
+			.active() {
+				background-color: @vui-listItemSelectedHoverBackgroundColor;
+			}
+		}
+
+		.active() {
+			background-color: @vui-listItemHoverBackgroundColor;
+		}
+
 	}
 
-	.list-item-active() {
-		background-color: @vui-listItemHoverBackgroundColor;
-	}
-
-	.list-item-selected-active() {
-		background-color: @vui-listItemSelectedHoverBackgroundColor;
-	}
 }
