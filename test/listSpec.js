@@ -17,105 +17,112 @@
 	} );
 
 	describe( 'ul', function() {
-		var ul;
-		var top_li;
-		var bottom_li;
 
-		var testListAndItemStyles = function( ulTagName ) {
+		var ul;
+
+		var testListStyles = function( ) {
+
 			it( 'has expected class styles', function() {
 				var diff = d2l.vui.differs.diffDefaultStyle( ul );
-				expect( diff ).toMatchER( "list." + ulTagName );
+				expect( diff ).toMatchRecordedObject( d2l.vui.records.getElementRecordPath( ul ) );
 			});
 
-			describe( 'list items', function() {
+			describe( 'li', function() {
+
+				var top_li;
+				var bottom_li;
+
+				var testItemStyles = function( ) {
+					it( 'has expected class styles on top node', function() {
+						var diff = d2l.vui.differs.diffDefaultStyle( top_li );
+						expect( diff ).toMatchRecordedObject(
+							d2l.vui.records.getElementRecordPath( ul )
+								.concat(d2l.vui.records.getElementRecordPath( top_li, ['previousElementSibling'] ))
+						);
+					});
+
+					it( 'has expected class styles on top node', function() {
+						var diff = d2l.vui.differs.diffDefaultStyle( bottom_li );
+						expect( diff ).toMatchRecordedObject(
+							d2l.vui.records.getElementRecordPath( ul )
+								.concat( d2l.vui.records.getElementRecordPath( bottom_li, ['nextElementSibling'] ))
+						);
+					});
+				};
+
+
 				beforeEach( function() {
 					top_li = document.createElement("li");
 					bottom_li = document.createElement("li");
+
 					ul.appendChild(top_li);
 					ul.appendChild(bottom_li);
 				});
 
 
-				it( 'unclassed first item has correct class styles', function() {
-					var diff = d2l.vui.differs.diffDefaultStyle( top_li );
-					expect( diff ).toMatchER( "list_item." + ulTagName + ".li_first" );
+				describe( 'unclassed item', function() {
+					testItemStyles();
 				});
 
-				it( 'unclassed last item has correct  class styles', function() {
-					var diff = d2l.vui.differs.diffDefaultStyle( bottom_li );
-					expect( diff ).toMatchER( "list_item." + ulTagName + ".li_last" );
+				describe( 'with vui-selected', function() {
+					beforeEach(function() {
+						top_li.className = "vui-selected";
+						bottom_li.className = "vui-selected";
+					});
+					testItemStyles();
 				});
 
-				it( 'selected first item has correct class styles', function() {
-					top_li.className = "vui-selected";
-					var diff = d2l.vui.differs.diffDefaultStyle( top_li );
-					expect( diff ).toMatchER( "list_item." + ulTagName + ".li_vui_selected_first" );
+				describe( 'with vui-active', function() {
+					beforeEach(function() {
+						top_li.className = "vui-active";
+						bottom_li.className = "vui-active";
+					});
+					testItemStyles( );
 				});
 
-				it( 'selected last item has correct  class styles', function() {
-					bottom_li.className = "vui-selected";
-					var diff = d2l.vui.differs.diffDefaultStyle( bottom_li );
-					expect( diff ).toMatchER( "list_item." + ulTagName + ".li_vui_selected_last" );
+				describe( 'with vui-selected vui-active', function() {
+					beforeEach(function() {
+						top_li.className = "vui-selected vui-active";
+						bottom_li.className = "vui-selected vui-active";
+					});
+					testItemStyles( );
 				});
 
-				it( 'active first item has correct class styles', function() {
-					top_li.className = "vui-active";
-					var diff = d2l.vui.differs.diffDefaultStyle( top_li );
-					expect( diff ).toMatchER( "list_item." + ulTagName + ".li_vui_active_first" );
-				});
-
-				it( 'active last item has correct  class styles', function() {
-					bottom_li.className = "vui-active";
-					var diff = d2l.vui.differs.diffDefaultStyle( bottom_li );
-					expect( diff ).toMatchER( "list_item." + ulTagName + ".li_vui_active_last" );
-				});
-
-				it( 'selected active first item has correct class styles', function() {
-					top_li.className = "vui-selected vui-active";
-					var diff = d2l.vui.differs.diffDefaultStyle( top_li );
-					expect( diff ).toMatchER( "list_item." + ulTagName + ".li_vui_selected_vui_active_first" );
-				});
-
-				it( 'selected active last item has correct  class styles', function() {
-					bottom_li.className = "vui-selected vui-active";
-					var diff = d2l.vui.differs.diffDefaultStyle( bottom_li );
-					expect( diff ).toMatchER( "list_item." + ulTagName + ".li_vui_selected_vui_active_last" );
-				});
 			});
 		};
 
-		describe( 'vui-list class', function() {
+		describe( 'with vui-list', function() {
 			beforeEach( function() {
 				ul = document.createElement("ul");
 				ul.className = "vui-list";
 				container.appendChild(ul);
 			});
 
-			testListAndItemStyles( "ul_vui_list" );
+			testListStyles( );
 
-			describe( 'with vui-compact modifier', function() {
+			describe( 'and vui-compact', function() {
 				beforeEach( function() {
 					ul.className = ul.className + " vui-compact";
 				});
 
-				testListAndItemStyles( "ul_vui_list_compact" );
+				testListStyles( );
 
 			});
 
-			describe( 'with vui-compact modifier', function() {
+			describe( 'and vui-compact', function() {
 				beforeEach( function() {
 					ul.className = ul.className + " vui-no-separator";
 				});
 
-				testListAndItemStyles( "ul_vui_list_no_separator" );
+				testListStyles( );
 			});
 
-			describe( 'with vui-compact and vui-no-separator modifiers', function() {
+			describe( 'and vui-compact and vui-no-separator', function() {
 				beforeEach( function() {
 					ul.className = ul.className + " vui-no-separator vui-compact";
 				});
 
-				testListAndItemStyles( "ul_vui_list_vui_no_separator_vui_compact" );
+				testListStyles( );
 			});
 
 		});
