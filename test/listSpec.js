@@ -24,7 +24,7 @@
 
 			it( 'has expected class styles', function() {
 				var diff = d2l.vui.differs.diffDefaultStyle( ul );
-				expect( diff ).toMatchRecordedObject( d2l.vui.records.getElementRecordPath( ul ) );
+				expect( diff ).toMatchRecordedObjectAt( d2l.vui.records.getElementRecordPath( ul ) );
 			});
 
 			describe( 'li', function() {
@@ -35,7 +35,7 @@
 				var testItemStyles = function( ) {
 					it( 'has expected class styles on top node', function() {
 						var diff = d2l.vui.differs.diffDefaultStyle( top_li );
-						expect( diff ).toMatchRecordedObject(
+						expect( diff ).toMatchRecordedObjectAt(
 							d2l.vui.records.getElementRecordPath( ul )
 								.concat(d2l.vui.records.getElementRecordPath( top_li, ['previousElementSibling'] ))
 						);
@@ -43,7 +43,7 @@
 
 					it( 'has expected class styles on top node', function() {
 						var diff = d2l.vui.differs.diffDefaultStyle( bottom_li );
-						expect( diff ).toMatchRecordedObject(
+						expect( diff ).toMatchRecordedObjectAt(
 							d2l.vui.records.getElementRecordPath( ul )
 								.concat( d2l.vui.records.getElementRecordPath( bottom_li, ['nextElementSibling'] ))
 						);
