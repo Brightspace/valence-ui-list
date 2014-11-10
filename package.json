@@ -1,12 +1,12 @@
 {
   "name": "vui-list",
   "description": "LESS mixins and CSS for applying list styles",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Desire2Learn-Valence/valence-ui-list.git"
+    "url": "https://github.com/Brightspace/valence-ui-list.git"
   },
   "scripts": {
     "test": "gulp && gulp test"
