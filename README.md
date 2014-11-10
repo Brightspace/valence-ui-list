@@ -7,5 +7,5 @@ style lists.
 
 [npm-url]: https://npmjs.org/package/vui-list
 [npm-image]: https://badge.fury.io/js/vui-list.png
-[ci-image]: https://travis-ci.org/Desire2Learn-Valence/valence-ui-list.svg?branch=master
-[ci-url]: https://travis-ci.org/Desire2Learn-Valence/valence-ui-list
+[ci-image]: https://travis-ci.org/Brightspace/valence-ui-list.svg?branch=master
+[ci-url]: https://travis-ci.org/Brightspace/valence-ui-list
