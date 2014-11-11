@@ -12,7 +12,7 @@
 		container.style.width="1000px";
 		document.body.appendChild(container);
 
-		jasmine.addMatchers(d2l.vui.matchers.jasmine);
+		jasmine.addMatchers(vui.matchers.jasmine);
 
 	} );
 
@@ -23,8 +23,8 @@
 		var testListStyles = function( ) {
 
 			it( 'has expected class styles', function() {
-				var diff = d2l.vui.differs.diffDefaultStyle( ul );
-				expect( diff ).toMatchRecordedObjectAt( d2l.vui.records.getElementRecordPath( ul ) );
+				var diff = vui.differs.dom.diffDefaultStyle( ul );
+				expect( diff ).toMatchRecordedObjectAt( vui.records.getElementRecordPath( ul ) );
 			});
 
 			describe( 'li', function() {
@@ -34,18 +34,18 @@
 
 				var testItemStyles = function( ) {
 					it( 'has expected class styles on top node', function() {
-						var diff = d2l.vui.differs.diffDefaultStyle( top_li );
+						var diff = vui.differs.dom.diffDefaultStyle( top_li );
 						expect( diff ).toMatchRecordedObjectAt(
-							d2l.vui.records.getElementRecordPath( ul )
-								.concat(d2l.vui.records.getElementRecordPath( top_li, ['previousElementSibling'] ))
+							vui.records.getElementRecordPath( ul )
+								.concat(vui.records.getElementRecordPath( top_li, ['previousElementSibling'] ))
 						);
 					});
 
 					it( 'has expected class styles on top node', function() {
-						var diff = d2l.vui.differs.diffDefaultStyle( bottom_li );
+						var diff = vui.differs.dom.diffDefaultStyle( bottom_li );
 						expect( diff ).toMatchRecordedObjectAt(
-							d2l.vui.records.getElementRecordPath( ul )
-								.concat( d2l.vui.records.getElementRecordPath( bottom_li, ['nextElementSibling'] ))
+							vui.records.getElementRecordPath( ul )
+								.concat( vui.records.getElementRecordPath( bottom_li, ['nextElementSibling'] ))
 						);
 					});
 				};
