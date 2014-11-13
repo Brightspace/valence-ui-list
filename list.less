@@ -1,4 +1,6 @@
-@vui-listSeparatorColor: #eaeaea;
+@vui-list-separator-color: #eaeaea;
+@vui-list-separator-style: solid;
+@vui-list-separator-width: 1px;
 
 #vui {
 	.list() {
@@ -12,7 +14,10 @@
 			padding: 7px 10px;
 
 			border-width: 0;
-			border-bottom: 1px solid @vui-listSeparatorColor;
+			border-bottom:
+				@vui-list-separator-width
+				@vui-list-separator-style
+				@vui-list-separator-color;
 			list-style-image: none;
 			list-style-position: outside;
 			list-style-type: none;
