@@ -3,7 +3,8 @@
 @vui-list-separator-width: 1px;
 
 #vui {
-	.list() {
+
+	.List() {
 
 		padding: 0;
 		list-style-image: none;
@@ -27,6 +28,10 @@
 			border-bottom-color: transparent;
 		}
 
+	}
+
+	.List {
+
 		.compact() {
 			& > li {
 				padding-top: 0;
@@ -34,7 +39,7 @@
 			}
 		}
 
-		.no-separator() {
+		.noSeparator() {
 			& > li {
 				border-bottom-color: transparent;
 			}

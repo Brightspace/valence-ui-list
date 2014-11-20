@@ -1,7 +1,7 @@
 {
   "name": "vui-list",
   "description": "LESS mixins and CSS for applying list styles",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "repository": {
@@ -15,7 +15,7 @@
     "del": "^0.1.3",
     "gulp": "^3.8.8",
     "gulp-jshint": "^1.8.5",
-    "vui-helpers": "^0.5.0",
+    "vui-helpers": "^0.5.1",
     "vui-karma-jasmine-tester": "^0.1.0"
   },
   "keywords": [
