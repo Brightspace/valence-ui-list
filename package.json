@@ -31,7 +31,7 @@
   "homepage": "https://github.com/Brightspace/valence-ui-list",
   "devDependencies": {
     "csslint": "^0.10.0",
-    "jasmine-dom-matchers": "^0.1.0",
+    "jasmine-dom-matchers": "^0.1.1",
     "karma": "^0.12.32",
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-jasmine": "^0.3.5",
