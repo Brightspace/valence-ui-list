@@ -1,8 +1,9 @@
 # vui-list
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
+[![Dependency Status][dependencies-image]][dependencies-url]
 
-The **vui-list** library contains Less mixins and CSS that you can use to style lists. 
+The **vui-list** library contains Sass mixins and CSS that you can use to style lists. LESS mixins are still include for backward compatibility, however these will likely be removed in a future version.
 
 For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
@@ -13,3 +14,5 @@ See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valenc
 [npm-image]: https://img.shields.io/npm/v/vui-list.svg
 [ci-image]: https://travis-ci.org/Brightspace/valence-ui-list.svg?branch=master
 [ci-url]: https://travis-ci.org/Brightspace/valence-ui-list
+[dependencies-url]: https://david-dm.org/brightspace/valence-ui-list
+[dependencies-image]: https://img.shields.io/david/Brightspace/valence-ui-list.svg

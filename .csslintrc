@@ -1,3 +1,1 @@
-{
-	"adjoining-classes": false
-}
+--ignore=adjoining-classes
