@@ -1,20 +1,13 @@
 {
   "name": "vui-list",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Mixins and CSS for applying list styles",
   "scripts": {
     "clean": "rimraf *.css",
     "prebuild": "npm run clean",
-    "build": "npm run build:sass:css && npm run build:less:css",
-    "build:less:css": "lessc list.css.less > list-less.css",
-    "postbuild:less:css": "csslint list-less.css",
-    "build:sass:css": "node-sass --output-style expanded list.css.scss list.css",
-    "postbuild:sass:css": "csslint list.css",
+    "build": "node-sass --output-style expanded list.css.scss list.css",
     "pretest": "npm run build",
-    "test": "npm run diff:assert && karma start karma.conf.js",
-    "prediff:assert": "npm run diff:create",
-    "diff:assert": "assertnodiff --file1 ./test/diff/less-scss-diff --file2 ./test/diff/less-scss-diff-new",
-    "diff:create": "createpatch --file1 list-less.css --file2 list.css -o ./test/diff/less-scss-diff-new"
+    "test": "csslint list.css && karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -34,13 +27,11 @@
   "homepage": "https://github.com/Brightspace/valence-ui-list",
   "devDependencies": {
     "csslint": "^0.10.0",
-    "diff-cli": "git://github.com/Brightspace/diff-cli.git#v0.0.1",
     "jasmine-dom-matchers": "^0.1.1",
     "karma": "^0.12.32",
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-jasmine": "^0.3.5",
     "karma-cli": "0.0.4",
-    "less": "^2.5.1",
     "node-sass": "^3.1.1",
     "rimraf": "^2.3.4"
   }
