@@ -11,5 +11,9 @@
     ".travis.yml",
     "karma.conf.js",
     "package.json"
-  ]
+  ],
+  "dependencies": {
+    "vui-colors": "^0.2.0",
+    "vui-typography": "^2.0.0"
+  }
 }

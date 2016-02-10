@@ -1,3 +1,4 @@
-node_modules/
-test/output
-list.css
+bower_components
+node_modules
+test/test.css
+table.css

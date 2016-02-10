@@ -7,10 +7,8 @@
 
 		beforeEach(function () {
 			jasmine.addMatchers(vui.jasmine.dom.matchers);
-
 			list = document.body.appendChild(document.createElement('ul'));
 			list.className = 'vui-list';
-			//list.style.color = 'green';
 
 			item1 = list.appendChild(document.createElement('li' ));
 			item1.appendChild(document.createTextNode('some stuff'));
@@ -64,19 +62,22 @@
 				expect(list).toHaveListStylePosition('outside');
 			});
 
-			it('first item to have separator', function() {
-				expect(item1).toHaveBottomBorderWidth('1px');
-				expect(item1).toHaveBottomBorderColor('rgb(234, 234, 234)');
-				expect(item1).toHaveBottomBorderStyle('solid');
-				expect(item1).toHaveTopBorderWidth('0px');
-				expect(item1).toHaveRightBorderWidth('0px');
-				expect(item1).toHaveLeftBorderWidth('0px');
+			it('to have a separator between first and second item', function() {
+				expect(item2).toHaveTopBorderWidth('1px');
+				expect(item2).toHaveTopBorderColor('rgb(211, 217, 227)');
+				expect(item2).toHaveTopBorderStyle('solid');
+				expect(item1).toHaveTopBorderWidth('1px');
+				expect(item1).toHaveTopBorderColor('rgba(0, 0, 0, 0)');
+				expect(item1).toHaveTopBorderStyle('solid');
 			});
 
-			it('first item to not have separator', function() {
-				expect(item2).toHaveBottomBorderWidth('1px');
-				expect(item2).toHaveBottomBorderColor('rgba(0, 0, 0, 0)');
-				expect(item2).toHaveBottomBorderStyle('solid');
+			it('first items to not have bottom, left, right border', function() {
+				expect(item1).toHaveBottomBorderWidth('0px');
+				expect(item1).toHaveRightBorderWidth('0px');
+				expect(item1).toHaveLeftBorderWidth('0px');
+				expect(item2).toHaveBottomBorderWidth('0px');
+				expect(item2).toHaveRightBorderWidth('0px');
+				expect(item2).toHaveLeftBorderWidth('0px');
 			});
 
 		});
@@ -87,11 +88,11 @@
 				list.className = 'vui-list vui-compact';
 			});
 
-			it('items to have 0px 10px padding', function() {
+			it('items to have 0px and 1.5rem (24px) padding', function() {
 				expect(item1).toHaveTopPadding('0px');
-				expect(item1).toHaveRightPadding('10px');
+				expect(item1).toHaveRightPadding('24px');
 				expect(item1).toHaveBottomPadding('0px');
-				expect(item1).toHaveLeftPadding('10px');
+				expect(item1).toHaveLeftPadding('24px');
 			});
 
 		});
@@ -103,42 +104,44 @@
 			});
 
 			it('first item not have separator', function() {
-				expect(item2).toHaveBottomBorderWidth('1px');
-				expect(item2).toHaveBottomBorderColor('rgba(0, 0, 0, 0)');
-				expect(item2).toHaveBottomBorderStyle('solid');
+				expect(item2).toHaveTopBorderWidth('1px');
+				expect(item2).toHaveTopBorderColor('rgba(0, 0, 0, 0)');
+				expect(item2).toHaveTopBorderStyle('solid');
 			});
 
 			it('last item to not have separator', function() {
-				expect(item2).toHaveBottomBorderWidth('1px');
-				expect(item2).toHaveBottomBorderColor('rgba(0, 0, 0, 0)');
-				expect(item2).toHaveBottomBorderStyle('solid');
+				expect(item2).toHaveTopBorderWidth('1px');
+				expect(item2).toHaveTopBorderColor('rgba(0, 0, 0, 0)');
+				expect(item2).toHaveTopBorderStyle('solid');
 			});
 
 		});
 
 		describe('items', function() {
 
-			it('items to have 7px 10px padding', function() {
-				expect(item1).toHaveTopPadding('7px');
-				expect(item1).toHaveRightPadding('10px');
-				expect(item1).toHaveBottomPadding('7px');
-				expect(item1).toHaveLeftPadding('10px');
+			it('items to have 0.5rem (8px) 1.5rem(24px) padding', function() {
+				expect(item1).toHaveTopPadding('8px');
+				expect(item1).toHaveRightPadding('24px');
+				expect(item1).toHaveBottomPadding('8px');
+				expect(item1).toHaveLeftPadding('24px');
 			});
 
 			it('to have background color when selected', function() {
 				item1.className = 'vui-selected';
-				expect(item1).toHaveBackgroundColor('rgb(232, 242, 252)');
-				expect(item1).toHaveBottomBorderColor('rgb(245, 245, 245)');
+				expect(item1).toHaveBackgroundColor('rgb(242, 248, 252)');
+				expect(item1).toHaveTopBorderColor('rgba(0, 0, 0, 0)');
+				expect(item2).toHaveTopBorderColor('rgb(153, 197, 229)');
 			});
 
 			it('to have background color when active', function() {
 				item1.className = 'vui-active';
-				expect(item1).toHaveBackgroundColor('rgb(231, 231, 231)');
+				expect(item1).toHaveBackgroundColor('rgb(242, 248, 252)');
 			});
 
 			it('to have background color when selected and active', function() {
 				item1.className = 'vui-active vui-selected';
-				expect(item1).toHaveBackgroundColor('rgb(211, 231, 250)');
+				expect(item1).toHaveBackgroundColor('rgb(235, 245, 252)');
+				expect(item2).toHaveTopBorderColor('rgb(153, 197, 229)');
 			});
 
 
