@@ -16,7 +16,7 @@ $vui-list-separator-width: 1px !default;
 		padding: px-to-base-rem(10) px-to-base-rem(30);
 
 		border-width: 0;
-		border-bottom:
+		border-top:
 			$vui-list-separator-width
 			$vui-list-separator-style
 			$vui-list-separator-color;
@@ -25,8 +25,8 @@ $vui-list-separator-width: 1px !default;
 		list-style-type: none;
 	}
 
-	& > li:last-child {
-		border-bottom-color: transparent;
+	& > li:first-child {
+		border-top-color: transparent;
 	}
 
 }
@@ -40,6 +40,6 @@ $vui-list-separator-width: 1px !default;
 
 @mixin vui-list-no-separator() {
 	& > li {
-		border-bottom-color: transparent;
+		border-top-color: transparent !important;
 	}
 }

@@ -62,19 +62,22 @@
 				expect(list).toHaveListStylePosition('outside');
 			});
 
-			it('first item to have separator', function() {
-				expect(item1).toHaveBottomBorderWidth('1px');
-				expect(item1).toHaveBottomBorderColor('rgb(211, 217, 227)');
-				expect(item1).toHaveBottomBorderStyle('solid');
-				expect(item1).toHaveTopBorderWidth('0px');
-				expect(item1).toHaveRightBorderWidth('0px');
-				expect(item1).toHaveLeftBorderWidth('0px');
+			it('to have a separator between first and second item', function() {
+				expect(item2).toHaveTopBorderWidth('1px');
+				expect(item2).toHaveTopBorderColor('rgb(211, 217, 227)');
+				expect(item2).toHaveTopBorderStyle('solid');
+				expect(item1).toHaveTopBorderWidth('1px');
+				expect(item1).toHaveTopBorderColor('rgba(0, 0, 0, 0)');
+				expect(item1).toHaveTopBorderStyle('solid');
 			});
 
-			it('first item to not have separator', function() {
-				expect(item2).toHaveBottomBorderWidth('1px');
-				expect(item2).toHaveBottomBorderColor('rgba(0, 0, 0, 0)');
-				expect(item2).toHaveBottomBorderStyle('solid');
+			it('first items to not have bottom, left, right border', function() {
+				expect(item1).toHaveBottomBorderWidth('0px');
+				expect(item1).toHaveRightBorderWidth('0px');
+				expect(item1).toHaveLeftBorderWidth('0px');
+				expect(item2).toHaveBottomBorderWidth('0px');
+				expect(item2).toHaveRightBorderWidth('0px');
+				expect(item2).toHaveLeftBorderWidth('0px');
 			});
 
 		});
@@ -101,15 +104,15 @@
 			});
 
 			it('first item not have separator', function() {
-				expect(item2).toHaveBottomBorderWidth('1px');
-				expect(item2).toHaveBottomBorderColor('rgba(0, 0, 0, 0)');
-				expect(item2).toHaveBottomBorderStyle('solid');
+				expect(item2).toHaveTopBorderWidth('1px');
+				expect(item2).toHaveTopBorderColor('rgba(0, 0, 0, 0)');
+				expect(item2).toHaveTopBorderStyle('solid');
 			});
 
 			it('last item to not have separator', function() {
-				expect(item2).toHaveBottomBorderWidth('1px');
-				expect(item2).toHaveBottomBorderColor('rgba(0, 0, 0, 0)');
-				expect(item2).toHaveBottomBorderStyle('solid');
+				expect(item2).toHaveTopBorderWidth('1px');
+				expect(item2).toHaveTopBorderColor('rgba(0, 0, 0, 0)');
+				expect(item2).toHaveTopBorderStyle('solid');
 			});
 
 		});
@@ -126,7 +129,8 @@
 			it('to have background color when selected', function() {
 				item1.className = 'vui-selected';
 				expect(item1).toHaveBackgroundColor('rgb(242, 248, 252)');
-				expect(item1).toHaveBottomBorderColor('rgb(211, 217, 227)');
+				expect(item1).toHaveTopBorderColor('rgba(0, 0, 0, 0)');
+				expect(item2).toHaveTopBorderColor('rgb(153, 197, 229)');
 			});
 
 			it('to have background color when active', function() {
@@ -137,6 +141,7 @@
 			it('to have background color when selected and active', function() {
 				item1.className = 'vui-active vui-selected';
 				expect(item1).toHaveBackgroundColor('rgb(235, 245, 252)');
+				expect(item2).toHaveTopBorderColor('rgb(153, 197, 229)');
 			});
 
 
