@@ -1,6 +1,6 @@
 
-@import 'list';
-@import 'list-item';
+@import 'list.scss';
+@import 'list-item.scss';
 
 .vui-list {
 	@include vui-list();

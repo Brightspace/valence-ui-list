@@ -1,0 +1,40 @@
+.vui-list {
+  padding: 0;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+}
+
+.vui-list > li {
+  padding: 0.5rem 1.5rem;
+  border-width: 0;
+  border-bottom: 1px solid #d3d9e3;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+}
+
+.vui-list > li:last-child {
+  border-bottom-color: transparent;
+}
+
+.vui-list.vui-compact > li {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.vui-list.vui-no-separator > li {
+  border-bottom-color: transparent;
+}
+
+.vui-list > .vui-selected {
+  background-color: #f2f8fc;
+}
+
+.vui-list > .vui-active {
+  background-color: #f2f8fc;
+}
+
+.vui-list > .vui-active.vui-selected {
+  background-color: #EBF5FC;
+}

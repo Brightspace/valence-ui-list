@@ -1,0 +1,33 @@
+@import '../list.css.scss';
+@import 'bower_components/vui-typography/typography.scss';
+
+
+body {
+	@include vui-typography;
+}
+
+.on {
+	ul {
+		@include vui-list;
+
+		& > .vui-selected {
+			@include vui-list-item-selected;
+		}
+
+		& > .vui-active {
+			@include vui-list-item-active;
+		}
+
+		& > .vui-active.vui-selected {
+			@include vui-list-item-selected-active;
+		}
+	}
+
+	ul.vui-compact {
+		@include vui-list-compact;
+	}
+
+	ul.vui-no-separator {
+		@include vui-list-no-separator;
+	}
+}
