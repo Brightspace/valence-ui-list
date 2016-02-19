@@ -9,6 +9,7 @@
     "prebuild": "npm run clean",
     "build": "npm run build:sass && npm run build:docs",
     "build:sass": "node-sass --output-style expanded list.css.scss list.css && cp list.css ./test",
+    "build:docs": "node-sass --output-style expanded ./screenshots/screenshots.scss ./test/screenshots.css && npm run screenshot",
     "postbuild:sass": "npm run autoprefix",
     "perceptual-diff": "percy snapshot test/",
     "screenshot": "phantomjs ./screenshots/build.js",
