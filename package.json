@@ -6,13 +6,15 @@
     "autoprefix": "postcss -c postcss.config.json",
     "autoprefix:test": "postcss -c ./test/postcss.config.json",
     "clean": "rimraf *.css && rimraf ./test/*.css",
+    "postinstall": "bower install",
     "prebuild": "npm run clean",
     "build": "npm run build:sass && npm run build:sass:test",
     "build:sass": "node-sass --output-style expanded list.css.scss list.css",
     "build:sass:test": "node-sass --output-style expanded ./test/test.scss ./test/test.css",
     "postbuild:sass:test": "npm run autoprefix:test",
     "postbuild:sass": "npm run autoprefix",
-    "postinstall": "bower install",
+    "perceptual-diff": "percy snapshot test/",
+    "screenshot": "phantomjs ./screenshots/build.js",
     "pretest": "npm run build",
     "test": "csslint list.css"
   },
@@ -40,7 +42,7 @@
     "csslint": "^0.10.0",
     "node-sass": "^3.4.2",
     "phantomjs-prebuilt": "^2.1.4",
-	"postcss-cli": "^2.3.2",
+    "postcss-cli": "^2.3.2",
     "rimraf": "^2.5.2"
   }
 }
