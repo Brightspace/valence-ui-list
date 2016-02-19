@@ -14,6 +14,101 @@ There are three styles of lists.
 
 For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
+## Installation
+
+`vui-list` can be installed from [Bower][bower-url]:
+```shell
+bower install vui-list
+```
+
+Or alternatively from [NPM][npm-url]:
+```shell
+npm install vui-list
+```
+
+Depending on which installation method you choose, use that path when doing the SASS import:
+
+```scss
+@import 'bower_components/vui-list/list.scss';
+@import 'bower_components/vui-list/list-item.scss';
+// or...
+@import "node_modules/vui-list/list.scss";
+@import "node_modules/vui-list/list-item.scss";
+```
+
+## Usage
+
+A list can be either a `<ol>` or `<ul>` HTML element containing any number of `<li>` elements. The default list style is with separators.
+
+HTML:
+```html
+<ol>
+	<li>Gold</li>
+	<li>Silver</li>
+	<li>Bronze</li>
+</ol>
+```
+
+SCSS:
+```scss
+ol {
+	@include vui-list;
+}
+```
+
+To style a list with no separators or a compact list, add the appropriate mixin.
+
+HTML:
+```html
+<ol>
+	<li>First Unseparated Item</li>
+	<li>Last Unseparated Item</li>
+</ol>
+
+<ul>
+	<li>Compact Item A</li>
+	<li>Compact Item B</li>
+<ul>
+```
+
+```scss
+ol {
+	@include vui-list;
+	@include vui-list-no-separator;
+}
+
+ul {
+	@include vui-list;
+	@include vui-list-compact;
+}
+```
+
+To style an individual list item as active, selected, or both, add the appropriate mixin to the list item.
+
+HTML:
+```html
+<ol>
+	<li>Gold</li>
+	<li>Silver</li>
+	<li>Bronze</li>
+</ol>
+```
+
+SCSS:
+```scss
+li:nth-child(1) {
+	@include vui-list-item-selected;
+}
+li:nth-child(2) {
+	@include vui-list-item-active;
+}
+li:nth-child(3) {
+	@include vui-list-item-selected-active;
+}
+```
+
+For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
+
 #### Coding styles
 See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on VUI naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
 
