@@ -5,6 +5,5 @@
 .travis.yml
 .csslintrc
 node_modules
-karma.conf.js
 test
 list.css.scss

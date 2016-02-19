@@ -6,15 +6,17 @@
     "autoprefix": "postcss -c postcss.config.json",
     "autoprefix:test": "postcss -c ./test/postcss.config.json",
     "clean": "rimraf *.css && rimraf ./test/*.css",
-    "build:sass:test": "node-sass --output-style expanded ./test/test.scss ./test/test.css",
-    "postbuild:sass:test": "npm run autoprefix:test",
-    "build:sass": "node-sass --output-style expanded list.css.scss list.css",
-    "postbuild:sass": "npm run autoprefix",
+    "postinstall": "bower install",
     "prebuild": "npm run clean",
     "build": "npm run build:sass && npm run build:sass:test",
-    "postinstall": "bower install",
+    "build:sass": "node-sass --output-style expanded list.css.scss list.css",
+    "build:sass:test": "node-sass --output-style expanded ./test/test.scss ./test/test.css",
+    "postbuild:sass:test": "npm run autoprefix:test",
+    "postbuild:sass": "npm run autoprefix",
+    "perceptual-diff": "percy snapshot test/",
+    "screenshot": "phantomjs ./screenshots/build.js",
     "pretest": "npm run build",
-    "test": "csslint list.css && karma start karma.conf.js"
+    "test": "csslint list.css"
   },
   "repository": {
     "type": "git",
@@ -33,19 +35,14 @@
   },
   "homepage": "https://github.com/Brightspace/valence-ui-list",
   "dependencies": {
-    "bower": "^1.4.1"
+    "bower": "^1.7.7"
   },
   "devDependencies": {
     "autoprefixer": "^6.1.2",
     "csslint": "^0.10.0",
-    "jasmine-core": "^2.4.1",
-    "jasmine-dom-matchers": "^0.1.1",
-    "karma": "^0.12.32",
-    "karma-cli": "0.0.4",
-    "karma-jasmine": "^0.3.5",
-    "karma-phantomjs-launcher": "^0.1.4",
     "node-sass": "^3.4.2",
-	"postcss-cli": "^2.3.2",
-    "rimraf": "^2.3.4"
+    "phantomjs-prebuilt": "^2.1.4",
+    "postcss-cli": "^2.3.2",
+    "rimraf": "^2.5.2"
   }
 }
