@@ -12,8 +12,6 @@ There are three styles of lists.
 | --------------- | ------------------ | ------- |
 | ![screenshot of list with separators](/screenshots/separated.png) | ![screenshot of list without separators](/screenshots/unseparated.png)| ![screenshot of compact list](/screenshots/compact.png) |
 
-For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
-
 ## Installation
 
 `vui-list` can be installed from [Bower][bower-url]:
