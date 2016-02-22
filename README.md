@@ -86,21 +86,21 @@ To style an individual list item as active, selected, or both, add the appropria
 HTML:
 ```html
 <ol>
-	<li class="vui-selected">Gold</li>
-	<li class="vui-active">Silver</li>
-	<li class="vui-selected-active">Bronze</li>
+	<li class="selected">Gold</li>
+	<li class="active">Silver</li>
+	<li class="selected-active">Bronze</li>
 </ol>
 ```
 
 SCSS:
 ```scss
-.vui-selected {
+.selected {
 	@include vui-list-item-selected;
 }
-.vui-active {
+.active {
 	@include vui-list-item-active;
 }
-.vui-selected-active {
+.selected-active {
 	@include vui-list-item-selected-active;
 }
 ```
