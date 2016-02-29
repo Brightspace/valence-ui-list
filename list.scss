@@ -1,5 +1,4 @@
 @import 'bower_components/vui-colors/colors.scss';
-@import 'bower_components/vui-typography/px-to-base-rem.scss';
 
 $vui-list-separator-color: $vui-color-titanius !default;
 $vui-list-separator-style: solid !default;
@@ -13,7 +12,7 @@ $vui-list-separator-width: 1px !default;
 	list-style-type: none;
 
 	& > li {
-		padding: px-to-base-rem(10) px-to-base-rem(30);
+		padding: 0.5rem 1.5rem;
 
 		border-width: 0;
 		border-top:
