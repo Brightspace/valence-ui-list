@@ -12,6 +12,6 @@
     "package.json"
   ],
   "dependencies": {
-    "vui-colors": "^0.2.0"
+    "d2l-colors": "~2.0.0"
   }
 }
