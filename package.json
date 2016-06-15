@@ -1,6 +1,6 @@
 {
   "name": "vui-list",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Mixins and CSS for applying list styles",
   "scripts": {
     "autoprefix": "postcss -c postcss.config.json && postcss -c ./test/postcss.config.json",
